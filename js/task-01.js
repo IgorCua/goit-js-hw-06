@@ -1,8 +1,10 @@
-'use strict'
-
-document.querySelector('ul').firstElementChild.addEventListener('click', (event) => {
-    listDetails();
-});
+window.addEventListener('load', ()=>{
+    if (document.querySelector('title').text !== 'Task 1' ) {
+      return;
+    } else {
+      return listDetails();
+    }
+  })
 function listDetails(){
     const itemsList = document.querySelectorAll('.item');
     
@@ -15,4 +17,3 @@ function listDetails(){
         if(i !== itemsList.length - 1) console.log('');
     });
 }
-//console.log(document.querySelector('ul').firstElementChild)
