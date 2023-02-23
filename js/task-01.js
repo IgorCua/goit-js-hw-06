@@ -1,10 +1,5 @@
-window.addEventListener('load', ()=>{
-    if (document.querySelector('title').text !== 'Task 1' ) {
-      return;
-    } else {
-      return listDetails();
-    }
-  })
+'use strict'
+
 function listDetails(){
     const itemsList = document.querySelectorAll('.item');
     
@@ -17,3 +12,4 @@ function listDetails(){
         if(i !== itemsList.length - 1) console.log('');
     });
 }
+listDetails();

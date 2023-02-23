@@ -1,4 +1,6 @@
 const changeColorBtn = document.querySelector('.change-color');
+const body = document.querySelector('body');
+const colorSpan = document.querySelector('.color');
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -9,6 +11,7 @@ function getRandomHexColor() {
 changeColorBtn.addEventListener('click', colorSwitcher);
 
 function colorSwitcher(){
-  document.querySelector('.color').textContent = getRandomHexColor();
-  document.querySelector('body').style = `background-color: ${getRandomHexColor()}`;
+  const color = getRandomHexColor();
+  colorSpan.textContent = color;
+  body.style = `background-color: ${color}`;
 }
