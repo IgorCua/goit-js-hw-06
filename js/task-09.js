@@ -13,5 +13,5 @@ changeColorBtn.addEventListener('click', colorSwitcher);
 function colorSwitcher(){
   const color = getRandomHexColor();
   colorSpan.textContent = color;
-  body.style = `background-color: ${color}`;
+  body.style.backgroundColor = color;
 }
