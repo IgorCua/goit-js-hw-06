@@ -9,38 +9,14 @@ const ingredients = [
 
 function addIngredients(ingredients){
   const list = document.querySelector('ul');    
-  
-  const potatoes = document.createElement('li');
-  potatoes.textContent = ingredients[0];
-  potatoes.classList.add('item');
 
-  const mushrooms = document.createElement('li');
-  mushrooms.textContent = ingredients[1];
-  mushrooms.classList.add('item');
+  const arr = ingredients.map((e, i) => {
+    i = document.createElement('li');
+    i.classList.add('item');
+    i.textContent = e;
+    return i;
+  });
 
-  const garlic = document.createElement('li');
-  garlic.textContent = ingredients[2];
-  garlic.classList.add('item');
-
-  const tomatoes = document.createElement('li');
-  tomatoes.textContent = ingredients[3];
-  tomatoes.classList.add('item');
-
-  const herbs = document.createElement('li');
-  herbs.textContent = ingredients[4];
-  herbs.classList.add('item');
-
-  const condiments = document.createElement('li');
-  condiments.textContent = ingredients[5];
-  condiments.classList.add('item');
-  
-  list.append(
-    potatoes,
-    mushrooms,
-    garlic,
-    tomatoes,
-    herbs,
-    condiments
-  );
+  list.append(...arr);
 }
 addIngredients(ingredients);
